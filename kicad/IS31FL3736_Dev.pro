@@ -1,4 +1,4 @@
-update=Tuesday, 31 December 2019 at 13:50:27
+update=05/04/2020 14:26:34
 version=1
 last_client=kicad
 [general]
@@ -26,7 +26,7 @@ ERC_TestSimilarLabels=1
 version=1
 PageLayoutDescrFile=
 LastNetListRead=IS31FL3736_Dev.net
-CopperLayerCount=4
+CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
 AllowBlindVias=0
@@ -38,13 +38,13 @@ MinViaDrill=0.254
 MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
-TrackWidth1=0.25
+TrackWidth1=0.1524
 TrackWidth2=0.1524
 TrackWidth3=0.3048
 TrackWidth4=0.6096
 TrackWidth5=1.2192
-ViaDiameter1=0.8
-ViaDrill1=0.4
+ViaDiameter1=0.6858
+ViaDrill1=0.3302
 ViaDiameter2=0.508
 ViaDrill2=0.254
 ViaDiameter3=0.6858
@@ -72,8 +72,8 @@ OthersTextSizeH=1
 OthersTextSizeThickness=0.15
 OthersTextItalic=0
 OthersTextUpright=1
-SolderMaskClearance=0.0508
-SolderMaskMinWidth=0.1016
+SolderMaskClearance=0
+SolderMaskMinWidth=0
 SolderPasteClearance=0
 SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
@@ -82,12 +82,12 @@ Type=0
 Enabled=1
 [pcbnew/Layer.In1.Cu]
 Name=In1.Cu
-Type=1
-Enabled=1
+Type=0
+Enabled=0
 [pcbnew/Layer.In2.Cu]
 Name=In2.Cu
-Type=1
-Enabled=1
+Type=0
+Enabled=0
 [pcbnew/Layer.In3.Cu]
 Name=In3.Cu
 Type=0
@@ -245,10 +245,21 @@ Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
-Clearance=0.2
-TrackWidth=0.25
-ViaDiameter=0.8
-ViaDrill=0.4
+Clearance=0.1524
+TrackWidth=0.1524
+ViaDiameter=0.6858
+ViaDrill=0.3302
+uViaDiameter=0.3
+uViaDrill=0.1
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
+[pcbnew/Netclasses/1]
+Name=LED
+Clearance=0.1524
+TrackWidth=0.1524
+ViaDiameter=0.508
+ViaDrill=0.254
 uViaDiameter=0.3
 uViaDrill=0.1
 dPairWidth=0.2

@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name is31fl3736_dev)(type KiCad)(uri ${KIPRJMOD}/lib/is31fl3736_dev.pretty)(options "")(descr ""))
+  (lib (name Jumper)(type KiCad)(uri ${KIPRJMOD}/lib/Jumper.pretty)(options "")(descr ""))
 )
