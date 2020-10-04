@@ -29,3 +29,6 @@ fp-info-cache
 
 .DS_Store
 
+build
+.poi
+

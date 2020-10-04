@@ -303,18 +303,18 @@ Vio
 Wire Wire Line
 	3850 4550 2950 4550
 Wire Wire Line
-	3850 4650 2650 4650
+	3850 4650 2350 4650
 Wire Wire Line
-	3850 4750 2350 4750
-Text Label 1750 4550 0    50   ~ 0
+	3850 4750 2050 4750
+Text Label 1450 4550 0    50   ~ 0
 SDA
-Text Label 1750 4650 0    50   ~ 0
+Text Label 1450 4650 0    50   ~ 0
 SCL
-Text Label 1750 4750 0    50   ~ 0
+Text Label 1450 4750 0    50   ~ 0
 ~INT_B
-Text Label 1750 4850 0    50   ~ 0
+Text Label 1450 4850 0    50   ~ 0
 ~SDB
-Text Label 1750 4950 0    50   ~ 0
+Text Label 1450 4950 0    50   ~ 0
 IICRST
 Wire Wire Line
 	3850 5350 3450 5350
@@ -359,7 +359,7 @@ Text Label 4950 1200 2    50   ~ 0
 ~INT_B
 Text Label 4950 1100 2    50   ~ 0
 ~SDB
-Text Label 2050 7050 2    50   ~ 0
+Text Label 1950 8300 2    50   ~ 0
 ADDR1
 Wire Wire Line
 	4350 4150 4350 3900
@@ -867,23 +867,23 @@ Wire Wire Line
 $Comp
 L Device:R R1
 U 1 1 5F19B592
-P 2350 4050
-F 0 "R1" V 2550 4050 50  0000 C CNN
-F 1 "100kΩ" V 2450 4050 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 2280 4050 50  0001 C CNN
-F 3 "~" H 2350 4050 50  0001 C CNN
-	1    2350 4050
+P 2050 4050
+F 0 "R1" V 2250 4050 50  0000 C CNN
+F 1 "100kΩ" V 2150 4050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 1980 4050 50  0001 C CNN
+F 3 "~" H 2050 4050 50  0001 C CNN
+	1    2050 4050
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R3
 U 1 1 5F1B9EE1
-P 2650 4050
-F 0 "R3" V 2850 4050 50  0000 C CNN
-F 1 "1kΩ" V 2750 4050 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 2580 4050 50  0001 C CNN
-F 3 "~" H 2650 4050 50  0001 C CNN
-	1    2650 4050
+P 2350 4050
+F 0 "R3" V 2550 4050 50  0000 C CNN
+F 1 "1kΩ" V 2450 4050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2280 4050 50  0001 C CNN
+F 3 "~" H 2350 4050 50  0001 C CNN
+	1    2350 4050
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -898,35 +898,35 @@ F 3 "~" H 2950 4050 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1950 3750 2350 3750
+	1650 3750 2050 3750
 Wire Wire Line
 	2950 3750 2950 3900
 Wire Wire Line
+	2050 3750 2050 3900
+Wire Wire Line
+	2050 4200 2050 4750
+Connection ~ 2050 3750
+Wire Wire Line
+	2050 3750 2350 3750
+Connection ~ 2050 4750
+Wire Wire Line
+	2050 4750 1450 4750
+Wire Wire Line
 	2350 3750 2350 3900
 Wire Wire Line
-	2350 4200 2350 4750
+	2350 4200 2350 4650
 Connection ~ 2350 3750
 Wire Wire Line
 	2350 3750 2650 3750
-Connection ~ 2350 4750
+Connection ~ 2350 4650
 Wire Wire Line
-	2350 4750 1750 4750
-Wire Wire Line
-	2650 3750 2650 3900
-Wire Wire Line
-	2650 4200 2650 4650
-Connection ~ 2650 3750
-Wire Wire Line
-	2650 3750 2950 3750
-Connection ~ 2650 4650
-Wire Wire Line
-	2650 4650 1750 4650
+	2350 4650 1450 4650
 Wire Wire Line
 	2950 4200 2950 4550
 Connection ~ 2950 4550
 Wire Wire Line
-	2950 4550 1750 4550
-Text Label 1950 3750 0    50   ~ 0
+	2950 4550 1450 4550
+Text Label 1650 3750 0    50   ~ 0
 Vio
 $Comp
 L Device:C C8
@@ -964,8 +964,8 @@ $Comp
 L Connector:Conn_01x09_Male J1
 U 1 1 5F62E460
 P 4450 1400
-F 0 "J1" H 4100 1500 50  0000 C CNN
-F 1 "Daisy IN" H 4200 1400 50  0000 C CNN
+F 0 "J1" H 4300 1500 50  0000 C CNN
+F 1 "I/O Connector" H 4350 1400 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Horizontal" H 4450 1400 50  0001 C CNN
 F 3 "~" H 4450 1400 50  0001 C CNN
 	1    4450 1400
@@ -1095,165 +1095,165 @@ Wire Wire Line
 $Comp
 L Jumper:SolderJumper_2_Open JP1
 U 1 1 5E0D8D3C
-P 1300 7050
-F 0 "JP1" H 1300 7255 50  0000 C CNN
-F 1 "VCC ADDR1" H 1300 7164 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1300 7050 50  0001 C CNN
-F 3 "~" H 1300 7050 50  0001 C CNN
-	1    1300 7050
+P 1200 8300
+F 0 "JP1" H 1200 8505 50  0000 C CNN
+F 1 "VCC ADDR1" H 1200 8414 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1200 8300 50  0001 C CNN
+F 3 "~" H 1200 8300 50  0001 C CNN
+	1    1200 8300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Jumper:SolderJumper_2_Open JP4
 U 1 1 5E0DB765
-P 1300 7950
-F 0 "JP4" H 1300 8155 50  0000 C CNN
-F 1 "GND ADDR1" H 1300 8064 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1300 7950 50  0001 C CNN
-F 3 "~" H 1300 7950 50  0001 C CNN
-	1    1300 7950
+P 1200 9200
+F 0 "JP4" H 1200 9405 50  0000 C CNN
+F 1 "GND ADDR1" H 1200 9314 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1200 9200 50  0001 C CNN
+F 3 "~" H 1200 9200 50  0001 C CNN
+	1    1200 9200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Jumper:SolderJumper_2_Open JP3
 U 1 1 5E0DB1AE
-P 1300 7650
-F 0 "JP3" H 1300 7855 50  0000 C CNN
-F 1 "SLC ADDR1" H 1300 7764 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1300 7650 50  0001 C CNN
-F 3 "~" H 1300 7650 50  0001 C CNN
-	1    1300 7650
+P 1200 8900
+F 0 "JP3" H 1200 9105 50  0000 C CNN
+F 1 "SLC ADDR1" H 1200 9014 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1200 8900 50  0001 C CNN
+F 3 "~" H 1200 8900 50  0001 C CNN
+	1    1200 8900
 	1    0    0    -1  
 $EndComp
 $Comp
 L Jumper:SolderJumper_2_Open JP2
 U 1 1 5E0DA9E8
-P 1300 7350
-F 0 "JP2" H 1300 7555 50  0000 C CNN
-F 1 "SDA ADDR1" H 1300 7464 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1300 7350 50  0001 C CNN
-F 3 "~" H 1300 7350 50  0001 C CNN
-	1    1300 7350
+P 1200 8600
+F 0 "JP2" H 1200 8805 50  0000 C CNN
+F 1 "SDA ADDR1" H 1200 8714 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1200 8600 50  0001 C CNN
+F 3 "~" H 1200 8600 50  0001 C CNN
+	1    1200 8600
 	1    0    0    -1  
 $EndComp
-Text Label 900  7050 0    50   ~ 0
+Text Label 800  8300 0    50   ~ 0
 Vcc
-Text Label 900  7350 0    50   ~ 0
+Text Label 800  8600 0    50   ~ 0
 SDA
-Text Label 900  7650 0    50   ~ 0
+Text Label 800  8900 0    50   ~ 0
 SCL
 Wire Wire Line
-	1150 7950 900  7950
+	1050 9200 800  9200
 Wire Wire Line
-	1150 7650 900  7650
+	1050 8900 800  8900
 Wire Wire Line
-	1150 7350 900  7350
+	1050 8600 800  8600
 Wire Wire Line
-	1150 7050 900  7050
-Text Label 900  7950 0    50   ~ 0
+	1050 8300 800  8300
+Text Label 800  9200 0    50   ~ 0
 GND
 Text Label 4350 6750 2    50   ~ 0
 GND
 Wire Wire Line
-	1450 7050 1750 7050
+	1350 8300 1650 8300
 Wire Wire Line
-	1750 7050 1750 7350
+	1650 8300 1650 8600
 Wire Wire Line
-	1750 7950 1450 7950
+	1650 9200 1350 9200
 Wire Wire Line
-	1450 7650 1750 7650
-Connection ~ 1750 7650
+	1350 8900 1650 8900
+Connection ~ 1650 8900
 Wire Wire Line
-	1750 7650 1750 7950
+	1650 8900 1650 9200
 Wire Wire Line
-	1450 7350 1750 7350
-Connection ~ 1750 7350
+	1350 8600 1650 8600
+Connection ~ 1650 8600
 Wire Wire Line
-	1750 7350 1750 7650
+	1650 8600 1650 8900
 Wire Wire Line
-	1750 7050 2050 7050
-Connection ~ 1750 7050
-Text Label 2050 8300 2    50   ~ 0
+	1650 8300 1950 8300
+Connection ~ 1650 8300
+Text Label 3250 8300 2    50   ~ 0
 ADDR2
 $Comp
 L Jumper:SolderJumper_2_Open JP5
 U 1 1 5E3DD201
-P 1300 8300
-F 0 "JP5" H 1300 8505 50  0000 C CNN
-F 1 "VCC ADDR2" H 1300 8414 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1300 8300 50  0001 C CNN
-F 3 "~" H 1300 8300 50  0001 C CNN
-	1    1300 8300
+P 2500 8300
+F 0 "JP5" H 2500 8505 50  0000 C CNN
+F 1 "VCC ADDR2" H 2500 8414 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 2500 8300 50  0001 C CNN
+F 3 "~" H 2500 8300 50  0001 C CNN
+	1    2500 8300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Jumper:SolderJumper_2_Open JP8
 U 1 1 5E3DD20B
-P 1300 9200
-F 0 "JP8" H 1300 9405 50  0000 C CNN
-F 1 "GND ADDR2" H 1300 9314 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1300 9200 50  0001 C CNN
-F 3 "~" H 1300 9200 50  0001 C CNN
-	1    1300 9200
+P 2500 9200
+F 0 "JP8" H 2500 9405 50  0000 C CNN
+F 1 "GND ADDR2" H 2500 9314 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 2500 9200 50  0001 C CNN
+F 3 "~" H 2500 9200 50  0001 C CNN
+	1    2500 9200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Jumper:SolderJumper_2_Open JP7
 U 1 1 5E3DD215
-P 1300 8900
-F 0 "JP7" H 1300 9105 50  0000 C CNN
-F 1 "SCL ADDR2" H 1300 9014 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1300 8900 50  0001 C CNN
-F 3 "~" H 1300 8900 50  0001 C CNN
-	1    1300 8900
+P 2500 8900
+F 0 "JP7" H 2500 9105 50  0000 C CNN
+F 1 "SCL ADDR2" H 2500 9014 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 2500 8900 50  0001 C CNN
+F 3 "~" H 2500 8900 50  0001 C CNN
+	1    2500 8900
 	1    0    0    -1  
 $EndComp
 $Comp
 L Jumper:SolderJumper_2_Open JP6
 U 1 1 5E3DD21F
-P 1300 8600
-F 0 "JP6" H 1300 8805 50  0000 C CNN
-F 1 "SDA ADDR2" H 1300 8714 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1300 8600 50  0001 C CNN
-F 3 "~" H 1300 8600 50  0001 C CNN
-	1    1300 8600
+P 2500 8600
+F 0 "JP6" H 2500 8805 50  0000 C CNN
+F 1 "SDA ADDR2" H 2500 8714 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 2500 8600 50  0001 C CNN
+F 3 "~" H 2500 8600 50  0001 C CNN
+	1    2500 8600
 	1    0    0    -1  
 $EndComp
-Text Label 900  8300 0    50   ~ 0
+Text Label 2100 8300 0    50   ~ 0
 Vcc
-Text Label 900  8600 0    50   ~ 0
+Text Label 2100 8600 0    50   ~ 0
 SDA
-Text Label 900  8900 0    50   ~ 0
+Text Label 2100 8900 0    50   ~ 0
 SCL
 Wire Wire Line
-	1150 9200 900  9200
+	2350 9200 2100 9200
 Wire Wire Line
-	1150 8900 900  8900
+	2350 8900 2100 8900
 Wire Wire Line
-	1150 8600 900  8600
+	2350 8600 2100 8600
 Wire Wire Line
-	1150 8300 900  8300
-Text Label 900  9200 0    50   ~ 0
+	2350 8300 2100 8300
+Text Label 2100 9200 0    50   ~ 0
 GND
 Wire Wire Line
-	1450 8300 1750 8300
+	2650 8300 2950 8300
 Wire Wire Line
-	1750 8300 1750 8600
+	2950 8300 2950 8600
 Wire Wire Line
-	1750 9200 1450 9200
+	2950 9200 2650 9200
 Wire Wire Line
-	1450 8900 1750 8900
-Connection ~ 1750 8900
+	2650 8900 2950 8900
+Connection ~ 2950 8900
 Wire Wire Line
-	1750 8900 1750 9200
+	2950 8900 2950 9200
 Wire Wire Line
-	1450 8600 1750 8600
-Connection ~ 1750 8600
+	2650 8600 2950 8600
+Connection ~ 2950 8600
 Wire Wire Line
-	1750 8600 1750 8900
+	2950 8600 2950 8900
 Wire Wire Line
-	1750 8300 2050 8300
-Connection ~ 1750 8300
+	2950 8300 3250 8300
+Connection ~ 2950 8300
 Wire Wire Line
 	4650 1800 4950 1800
 Wire Wire Line
@@ -1832,52 +1832,52 @@ Connection ~ 2850 5600
 Wire Wire Line
 	2850 5600 2850 5650
 Wire Wire Line
-	2350 4950 3850 4950
+	2650 4950 3850 4950
 $Comp
 L Device:R R2
 U 1 1 5F35815A
-P 2350 5250
-F 0 "R2" V 2550 5250 50  0000 C CNN
-F 1 "100kΩ" V 2450 5250 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 2280 5250 50  0001 C CNN
-F 3 "~" H 2350 5250 50  0001 C CNN
-	1    2350 5250
+P 2650 5250
+F 0 "R2" V 2850 5250 50  0000 C CNN
+F 1 "100kΩ" V 2750 5250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2580 5250 50  0001 C CNN
+F 3 "~" H 2650 5250 50  0001 C CNN
+	1    2650 5250
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2350 4950 2350 5100
+	2650 4950 2650 5100
 Wire Wire Line
-	2350 5400 2350 5600
-Connection ~ 2350 4950
+	2650 5400 2650 5600
+Connection ~ 2650 4950
 Wire Wire Line
-	2350 4950 1750 4950
-Wire Wire Line
-	2700 4850 1750 4850
-Wire Wire Line
-	3850 4850 2700 4850
-Connection ~ 2700 4850
-Wire Wire Line
-	2700 5100 2700 4850
-Wire Wire Line
-	2700 5600 2850 5600
-Wire Wire Line
-	2350 5600 2700 5600
-Connection ~ 2700 5600
-Wire Wire Line
-	2700 5400 2700 5600
+	2650 4950 1450 4950
 $Comp
 L Device:R R4
 U 1 1 5F2523AA
-P 2700 5250
-F 0 "R4" V 2900 5250 50  0000 C CNN
-F 1 "100kΩ" V 2800 5250 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 2630 5250 50  0001 C CNN
-F 3 "~" H 2700 5250 50  0001 C CNN
-	1    2700 5250
+P 2650 4050
+F 0 "R4" V 2850 4050 50  0000 C CNN
+F 1 "100kΩ" V 2750 4050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2580 4050 50  0001 C CNN
+F 3 "~" H 2650 4050 50  0001 C CNN
+	1    2650 4050
 	-1   0    0    1   
 $EndComp
 Text Notes 1900 6100 0    50   ~ 0
 SBD - Pulled low to disable the chip\nThe MCU will need to pull this high.
 Text Notes 850  1050 0    50   ~ 0
 Optional
+Wire Wire Line
+	1450 4850 2650 4850
+Wire Wire Line
+	2650 5600 2850 5600
+Wire Wire Line
+	2650 3750 2650 3900
+Wire Wire Line
+	2650 4200 2650 4850
+Connection ~ 2650 3750
+Wire Wire Line
+	2650 3750 2950 3750
+Connection ~ 2650 4850
+Wire Wire Line
+	2650 4850 3850 4850
 $EndSCHEMATC
