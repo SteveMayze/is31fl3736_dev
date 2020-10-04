@@ -1,0 +1,72 @@
+sa0 fe c5 p sa0 fd 02 p sa0 00 01 p  sa0 01 01 p  sa0 02 01 p
+
+sa0 fe c5 p sa0 fd 02 p
+
+sa0 fe c5 p sa0 fd 00 p sa0 00 FF p  sa0 01 FF p  sa0 02 FF p
+
+
+
+sa0 fe c5 p sa0 fd 03 p sa0 00 05 p sa0 fe c5 p  sa0 fd 00 p sa1 00 p sa1 05 p
+
+
+sa0 fe c5 p sa0 fd 03 p sa0 00 01 p sa0 01 ff p sa0 fe c5 p sa0 fd 00 p sa0 00 ff p  sa0 01 ff p  sa0 02 ff p
+
+sa0 fe c5 p sa0 fd 03 p sa0 00 00 p 
+
+
+sa0 fe c5 p sa0 fd 03 p sa0 00 03 p sa0 01 ff p sa0 fe c5 p sa0 fd 02 p sa0 00 01 p  sa0 01 01 p  sa0 02 01 p
+
+Auto Breath Mode
+sa0 fe c5 p sa0 fd 03 p sa0 00 05 p sa0 01 ff p sa0 fe c5 p sa0 fd 02 p sa0 00 01 p  sa0 01 01 p  sa0 02 01 p
+
+On
+sa0 fe c5 p sa0 fd 03 p sa0 00 01 p sa0 01 ff p sa0 fe c5 p sa0 fd 00 p sa0 00 ff p  sa0 01 ff p  sa0 02 ff p
+
+Unlock,      Set Page 0, Read 00  5 Bytes
+sa0 fe c5 p  sa0 fd 00 p sa1 00 p sa1 05 p
+
+
+Enable operation Full global current (Auto-Breath mode)
+Unlock,     Set Page 3, Enable Op,  Full current, ABM-1 0,   ABM-1 1,     ABM-1 2
+sa0 fe c5 p sa0 fd 03 p sa0 00 07 p sa0 01 ff p sa0 00 01 p  sa0 01 01 p  sa0 02 01 p
+
+
+Reset
+Unlock,     Set page 3, Read reg 11
+sa0 fe c5 p sa0 fd 03 p sa1 11 p sa0 01 p
+
+
+Example ---
+
+Disable Software
+. [Unlock, Pg 3, Software disable] . sa0 fe c5 p sa0 fd 03 p sa0 00 00 p
+
+Open all LEDs
+[Unlock, Pg 0, Open all LEDs\n\r] sa0 fe c5 p sa0 fd 00 p sa0 00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF p
+[Unlock, Pg 0, Open all LEDs\n\r] sa0 fe c5 p sa0 fd 00 p sa0 00 3F 00 3F 00 3F 00 3F 00 3F 00 3F 00 3F 00 3F 00 3F 00 3F 00 3F 00 3F 00 p
+
+Reset PWM
+[Unlock, Pg 1, Set PWM to 00\n\r] sa0 fe c5 p sa0 fd 01 p sa0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 p
+sa0 fe c5 p sa0 fd 01 p sa0 00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF p
+
+Reset ABM
+Unlock,     Set Page 2, Set AMB to 00
+sa0 fe c5 p sa0 fd 02 p sa0 00 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 p
+sa0 fe c5 p sa0 fd 02 p sa0 00 02 02 02 02 02 02 02 02 02 02 02 02 02 02 02 02 02 02 02 02 02 02 02 02 p
+sa0 fe c5 p sa0 fd 02 p sa0 00 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 03 p
+
+Get ready
+[Unlock, Pg 3, Enable - With detect, GCC FF\n\r] sa0 fe c5 p sa0 fd 03 p sa0 00 05 p sa0 01 ff p
+
+Low PWM
+Unlock,     Set Page 1, Set PWM to 00
+sa0 fe c5 p sa0 fd 00 p sa0 00 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 p
+
+High PWM
+Unlock,     Set Page 1, Set PWM to 00
+sa0 fe c5 p sa0 fd 00 p sa0 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 p
+
+Check states
+Unlock,      Set Page 0, Read 18  24 Bytes
+[Unlock, Pg 0 \n\r] sa0 fe c5 p  sa0 fd 00 p sa0 18 p sa1 30 p
+[Unlock, Pg 0 \n\r] sa0 fe c5 p  sa0 fd 00 p  [Read On/OFF Reg:] sa0 0  p sa1 18 p .  [Read Open Reg:] sa0 18 p sa1 18 p . [Read Short Reg:] sa0 30 p sa1 18 p
