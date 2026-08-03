@@ -1,3 +1,5 @@
 (sym_lib_table
-  (lib (name IS31FL3736_Dev-rescue)(type Legacy)(uri ${KIPRJMOD}/IS31FL3736_Dev-rescue.lib)(options "")(descr ""))
+	(version 7)
+	(lib (name "IS31FL3736_Dev-rescue") (type "Legacy") (uri "${KIPRJMOD}/IS31FL3736_Dev-rescue.lib") (options "") (descr ""))
+	(lib (name "IS31FL3736_Dev-cache") (type "Legacy") (uri "D:/pcbs/is31fl3736_dev/kicad/IS31FL3736_Dev-cache.lib") (options "") (descr "Legacy project cache library"))
 )
